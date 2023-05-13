@@ -24,12 +24,13 @@ public class UseCase {
 
     Person p = new Person("wq", "kant");
 
+    @Test
     public void rmiServer1()  {
         // 创建rmi注册中心
         ServiceImpl service = null;
         try {
-            service = new ServiceImpl();
             Registry registry = LocateRegistry.createRegistry(1199);
+            service = new ServiceImpl();
             registry.bind("service", service); // 绑定远程对象HelloImp到RMI服务注册器
             System.out.println("server start");
         } catch (RemoteException e) {

@@ -1,4 +1,4 @@
-/*
+
 import java.io.IOException;
 import java.io.Serializable;
 
@@ -15,4 +15,4 @@ public class Evil implements Serializable {
 
     }
 }
-*/
+
